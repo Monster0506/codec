@@ -9,11 +9,11 @@ class Signer:
     def sign(self, message: bytes, private_key: bytes) -> bytes:
         """
         Signs a message using the private key.
-        
+
         Args:
             message: The message to sign.
             private_key: PEM encoded private key bytes.
-            
+
         Returns:
             bytes: The signature.
         """
@@ -36,12 +36,12 @@ class Signer:
     def verify(self, message: bytes, signature: bytes, public_key: bytes) -> bool:
         """
         Verifies a signature.
-        
+
         Args:
             message: The original message.
             signature: The signature to verify.
             public_key: PEM encoded public key bytes.
-            
+
         Returns:
             bool: True if valid, False otherwise.
         """
