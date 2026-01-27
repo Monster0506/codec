@@ -61,3 +61,15 @@ class Transaction:
     signature: Signature
     timestamp: Timestamp
 
+
+@dataclass
+class Hash:
+    hash_bytes: bytes
+
+    def __str__(self) -> str:
+        return self.hash_bytes.hex()
+
+    @classmethod
+    def from_hex(cls, hex_str: str) -> Hash:
+        return cls(bytes.fromhex(hex_str))
+
